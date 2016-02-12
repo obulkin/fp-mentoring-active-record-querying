@@ -18,11 +18,11 @@ describe "Querying" do
   end
 
   it "collect all of the likes on the posts of a user with email ( domenick.spinka@gmail.com )" do
-    result = "your query"
+    result = User.find_by(email: "domenick.spinka@gmail.com").posts.map {|post| post.likes}.flatten
 
     ###################
     # DO NOT CODE BELOW THIS
-    ##################
+    ###################
     answers = [2, 16, 3, 13, 19, 7, 12, 4, 11, 20, 5, 8, 21]
 
     result.each do |like|
@@ -37,7 +37,7 @@ describe "Querying" do
 
     ###################
     # DO NOT CODE BELOW THIS
-    ##################
+    ###################
     answers = [1, 3, 2, 4, 6]
 
     result.each do |post|
@@ -52,7 +52,7 @@ describe "Querying" do
 
     ###################
     # DO NOT CODE BELOW THIS
-    ##################
+    ###################
     answers = [2, 4]
 
     result.each do |user|
@@ -67,7 +67,7 @@ describe "Querying" do
 
     ###################
     # DO NOT CODE BELOW THIS
-    ##################
+    ###################
 
     answers = [9, 8]
 
